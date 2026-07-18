@@ -86,14 +86,39 @@ h2::after {
     border-radius: 2px;
 }
 
-/* Hero Section */
+/* Center alignment for the Hero section container */
 .hero-section {
-    align-items: flex-start;
+    align-items: center;      /* Centers content horizontally */
+    text-align: center;       /* Centers all text within */
 }
 
-.hero-content h1 {
-    font-size: 4rem;
-    margin-bottom: 0.5rem;
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;      /* Keeps structural items stacked perfectly in the center */
+}
+
+/* Profile Photo Styling */
+.profile-photo-container {
+    margin-bottom: 2rem;       /* Creates clean space between your photo and your name */
+    display: flex;
+    justify-content: center;
+}
+
+.profile-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;        /* Makes the image a perfect circle */
+    object-fit: cover;         /* Prevents stretching or distortion */
+    border: 4px solid var(--accent-color);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Adjust layout alignment for your buttons */
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;   /* Keeps buttons centered under the text */
 }
 
 .highlight {
