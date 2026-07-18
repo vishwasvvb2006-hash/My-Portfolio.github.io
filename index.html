@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vishwa S | Portfolio</title>
+    <title>Vishwa S | Data Scientist & AI Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,33 +14,79 @@
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- Hero / Home Section -->
+    <!-- Hero Section -->
     <section id="home" class="hero-section">
         <div class="hero-content">
             <h1>Hi, I'm <span class="highlight">Vishwa S</span></h1>
-            <p>Aspiring AI Engineer & Data Analyst</p>
-            <a href="#projects" class="btn">View My Work</a>
+            <p class="tagline">Data Analyst | Data Scientist | AI & ML Enthusiast</p>
+            <p class="bio-brief">Transforming raw data into meaningful insights and developing intelligent solutions.</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn">View Projects</a>
+                <a href="#contact" class="btn secondary">Contact Me</a>
+            </div>
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- About & Skills Section -->
     <section id="about" class="about-section">
         <h2>About Me</h2>
         <div class="about-container">
-            <div class="about-text">
-                <p>I am a passionate B.Tech Artificial Intelligence and Data Science student. I specialize in turning complex datasets into actionable insights and building intelligent system architectures.</p>
+            <p>I am an Artificial Intelligence and Data Science undergraduate student at AAA College of Engineering and Technology (2023 – 2027) with a current CGPA of 7.97. I possess practical experience in machine learning, data analytics, and software development, with a passion for developing AI-powered solutions for healthcare and business applications.</p>
+            
+            <h3 class="sub-heading">Technical Core Skills</h3>
+            <div class="skills-category">
+                <h4>Languages & Databases</h4>
                 <div class="skills-grid">
                     <span class="skill-tag">Python</span>
                     <span class="skill-tag">SQL</span>
-                    <span class="skill-tag">Machine Learning</span>
-                    <span class="skill-tag">Deep Learning</span>
-                    <span class="skill-tag">Power BI & Excel</span>
+                    <span class="skill-tag">MySQL</span>
                 </div>
+            </div>
+
+            <div class="skills-category">
+                <h4>Data Analysis & Visualization</h4>
+                <div class="skills-grid">
+                    <span class="skill-tag">Pandas</span>
+                    <span class="skill-tag">NumPy</span>
+                    <span class="skill-tag">Excel</span>
+                    <span class="skill-tag">Power BI</span>
+                    <span class="skill-tag">Matplotlib</span>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h4>Machine Learning & Tools</h4>
+                <div class="skills-grid">
+                    <span class="skill-tag">Scikit-learn</span>
+                    <span class="skill-tag">Regression & Classification</span>
+                    <span class="skill-tag">Clustering</span>
+                    <span class="skill-tag">NLP</span>
+                    <span class="skill-tag">Git & GitHub</span>
+                    <span class="skill-tag">VS Code</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section">
+        <h2>Work Experience</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>Data Scientist Intern</h3>
+                <span class="company">JEYA SHREE, Madurai</span>
+                <span class="date">June 2025 – July 2025</span>
+                <ul>
+                    <li>Developed Machine Learning models for predictive analytics on real-world datasets.</li>
+                    <li>Performed data preprocessing, feature engineering, and handled missing data anomalies.</li>
+                    <li>Assisted in cloud deployment strategies and implemented system validation protocols.</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -49,39 +95,53 @@
     <section id="projects" class="projects-section">
         <h2>Featured Projects</h2>
         <div class="projects-grid">
-            <!-- Project 1 -->
+            
             <div class="project-card">
-                <h3>VEXAS AI</h3>
-                <p>A dual-mode Flask assistant operating both online and offline with dynamic model routing capabilities.</p>
-                <div class="project-tags"><span>Flask</span><span>Ollama</span><span>Python</span></div>
+                <h3>Chronic Kidney Disease Prediction</h3>
+                <p>An AI-based healthcare application that predicts Chronic Kidney Disease using patient clinical parameters to facilitate early-stage intervention.</p>
+                <div class="project-tags"><span>Python</span><span>Scikit-learn</span><span>Streamlit</span></div>
             </div>
-            <!-- Project 2 -->
+
             <div class="project-card">
-                <h3>Alchemix Chatbot</h3>
-                <p>An intelligent chemical informatics tool designed for molecular exploration and history parsing.</p>
-                <div class="project-tags"><span>Groq AI</span><span>RDKit</span><span>Python</span></div>
+                <h3>ChemBot Elite OS</h3>
+                <p>An AI-powered virtual chemistry assistant capable of molecular information retrieval, property calculation, and general interaction mapping.</p>
+                <div class="project-tags"><span>Python</span><span>RDKit</span><span>PubChem API</span></div>
             </div>
-            <!-- Project 3 -->
+
+            <div class="project-card">
+                <h3>VEXAS AI Assistant</h3>
+                <p>An advanced local AI voice assistant supporting dynamic online/offline speech recognition, system automation, and dual-model execution routing.</p>
+                <div class="project-tags"><span>Ollama</span><span>Groq API</span><span>Vosk</span><span>Flask</span></div>
+            </div>
+
             <div class="project-card">
                 <h3>Smart Grid Fault Detection</h3>
-                <p>An ML system aimed at identifying structural real-time anomalies within electricity distribution grids.</p>
-                <div class="project-tags"><span>Scikit-Learn</span><span>Data Science</span></div>
+                <p>A machine learning architecture developed for automated anomaly monitoring within electrical distribution grids to minimize operational downtime.</p>
+                <div class="project-tags"><span>Machine Learning</span><span>Python</span></div>
             </div>
+
+            <div class="project-card">
+                <h3>Fake News Detection</h3>
+                <p>An NLP machine learning tracking classification framework built to verify the structural integrity of digital news articles.</p>
+                <div class="project-tags"><span>NLP</span><span>Scikit-learn</span><span>Python</span></div>
+            </div>
+
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <h2>Get In Touch</h2>
-        <p>Want to collaborate or discuss a project? Let's connect!</p>
+        <p>I am looking to secure a Data Analyst or Data Scientist role where I can apply my analytical capabilities to solve real-world business problems.</p>
         <div class="contact-links">
-            <a href="mailto:your.email@example.com" class="btn">Email Me</a>
-            <a href="https://github.com" target="_blank" class="btn secondary">GitHub</a>
+            <a href="mailto:your-email@example.com" class="btn">Email Me</a>
+            <a href="https://linkedin.com/in/vishwa-s-b60a38388" target="_blank" class="btn secondary">LinkedIn</a>
+            <a href="https://github.com/Vishwa2006-eng" target="_blank" class="btn secondary">GitHub</a>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Vishwa S. Built with clean code.</p>
+        <p>&copy; 2026 Vishwa S. All Rights Reserved.</p>
     </footer>
 
 </body>
