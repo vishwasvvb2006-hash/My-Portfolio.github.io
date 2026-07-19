@@ -154,12 +154,8 @@
         <h2>Get In Touch</h2>
         <p>I am actively exploring opportunities for entry-level positions or recruitment tracking. Let's discuss how my data architectures can add immediate value to your technical pipelines.</p>
         <div class="contact-container">
-            <!-- FIXED EMAIL LINK -->
-            <!-- இந்த மாதிரி மாற்ற வேண்டும் -->
-           <!-- இந்த புதிய வரியை மட்டும் மாற்றி அமைக்கவும் -->
-           <a href="https://mail.google.com/mail/?view=cm&fs=1&to=vishwasubramanian7981@gmail.com" target="_blank" class="btn">Send Email Direct</a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=vishwasubramanian7981@gmail.com" target="_blank" class="btn">Send Email Direct</a>
             <div class="social-links">
-                <!-- FIXED LINKEDIN & GITHUB LINKS -->
                 <a href="https://www.linkedin.com/in/vishwa68" target="_blank" class="link-item">LinkedIn Portfolio Link</a>
                 <a href="https://github.com/Vishwa2006-eng" target="_blank" class="link-item">GitHub Code Repository</a>
             </div>
@@ -169,29 +165,24 @@
     <footer>
         <p>&copy; 2026 Vishwa S. Engineered for Professional Technical Placements.</p>
     </footer>
-    <!-- universal scroll animation script -->
+
+    <!-- Universal Scroll Observer Layer (One by One) -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            // அனிமேஷன் ஆக வேண்டிய எலிமெண்டுகளை தேர்ந்தெடுக்கிறோம்
             const items = document.querySelectorAll('.project-card, .skills-box, .timeline-item');
-            
             items.forEach(item => item.classList.add('reveal-item'));
 
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach((entry, index) => {
-                    if (entry.isIntersecting) {
-                        // ஒரே நேரத்தில் வராமல், 150 மில்லிசெகண்ட் கேப்பில் ஒவ்வொன்றாக வரும் (One by One)
+            const observer = new IntersectionObserver((entries) => {
+                let delayCounter = 0;
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting && !entry.target.classList.contains('active')) {
                         setTimeout(() => {
                             entry.target.classList.add('active');
-                        }, index * 150);
-                        
-                        observer.unobserve(entry.target);
+                        }, delayCounter * 150);
+                        delayCounter++;
                     }
                 });
-            }, {
-                threshold: 0.1,
-                rootMargin: "0px 0px -40px 0px"
-            });
+            }, { threshold: 0.15 });
 
             items.forEach(item => observer.observe(item));
         });
