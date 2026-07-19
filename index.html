@@ -169,6 +169,33 @@
     <footer>
         <p>&copy; 2026 Vishwa S. Engineered for Professional Technical Placements.</p>
     </footer>
+    <!-- universal scroll animation script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // அனிமேஷன் ஆக வேண்டிய எலிமெண்டுகளை தேர்ந்தெடுக்கிறோம்
+            const items = document.querySelectorAll('.project-card, .skills-box, .timeline-item');
+            
+            items.forEach(item => item.classList.add('reveal-item'));
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        // ஒரே நேரத்தில் வராமல், 150 மில்லிசெகண்ட் கேப்பில் ஒவ்வொன்றாக வரும் (One by One)
+                        setTimeout(() => {
+                            entry.target.classList.add('active');
+                        }, index * 150);
+                        
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: "0px 0px -40px 0px"
+            });
+
+            items.forEach(item => observer.observe(item));
+        });
+    </script>
 
 </body>
 </html>
