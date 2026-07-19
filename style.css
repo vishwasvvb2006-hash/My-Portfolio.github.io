@@ -407,9 +407,9 @@ footer {
 /* அனிமேஷன் ஆவதற்கு முன் ஒளிந்திருக்கும் நிலை */
 .reveal-item {
     opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
-                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: translateY(50px);
+    transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), 
+                transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* ஸ்க்ரோல் செய்து அந்த இடத்திற்கு வந்ததும் அனிமேஷன் ஆகும் நிலை */
