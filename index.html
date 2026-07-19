@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vishwa S | Data Scientist & AI Engineer Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- Cache Busting சேர்க்கப்பட்டுள்ளது, இதனால் அனிமேஷன் உடனே தெரியும் -->
+    <link rel="stylesheet" href="style.css?v=1.2">
 </head>
 <body>
 
@@ -154,6 +155,7 @@
         <h2>Get In Touch</h2>
         <p>I am actively exploring opportunities for entry-level positions or recruitment tracking. Let's discuss how my data architectures can add immediate value to your technical pipelines.</p>
         <div class="contact-container">
+            <!-- டைரக்ட் ஜிமெயில் ஓபனிங் பிக்ஸ் -->
             <a href="https://mail.google.com/mail/?view=cm&fs=1&to=vishwasubramanian7981@gmail.com" target="_blank" class="btn">Send Email Direct</a>
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/vishwa68" target="_blank" class="link-item">LinkedIn Portfolio Link</a>
@@ -166,7 +168,7 @@
         <p>&copy; 2026 Vishwa S. Engineered for Professional Technical Placements.</p>
     </footer>
 
-    <!-- Universal Scroll Observer Layer (One by One) -->
+    <!-- Universal Slowly Delayed Scroll Animation Script -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const items = document.querySelectorAll('.project-card, .skills-box, .timeline-item');
@@ -178,11 +180,11 @@
                     if (entry.isIntersecting && !entry.target.classList.contains('active')) {
                         setTimeout(() => {
                             entry.target.classList.add('active');
-                        }, delayCounter * 450);
+                        }, delayCounter * 250); 
                         delayCounter++;
                     }
                 });
-            }, { threshold: 0.0.1 });
+            }, { threshold: 0.1 });
 
             items.forEach(item => observer.observe(item));
         });
