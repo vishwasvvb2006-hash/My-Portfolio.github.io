@@ -129,20 +129,22 @@ h2::after {
     margin-top: 2rem; /* டாப் மார்ஜின் கூட்டுவதன் மூலம் போட்டோ இன்னும் கீழே இறங்கி முழுமையாகத் தெரியும் */
     margin-bottom: 1.8rem;
 }
-/* பிரீமியம் பல்ஸ் க்ளோ எஃபெக்ட் */
+/* அனிமேஷனை நீக்கிவிட்டு போட்டோவை ஒரே இடத்தில் கச்சிதமாக உட்கார வைக்கும் ஸ்டைல் */
 .profile-photo {
     width: 160px;
     height: 160px;
     border-radius: 50%;
-    object-fit: contain; /* 'cover' ஐ எடுத்துவிட்டு 'contain' ஆக மாற்றவும் */
-    background-color: var(--bg-card); /* படம் முழுமையாகத் தெரியும்போது மீதி இடம் அழகாக இருக்க background கலர் */
+    object-fit: cover;
     border: 3px solid var(--accent);
-    box-shadow: 0 0 20px rgba(6, 182, 212, 0.2);
-    animation: pulseGlow 3s infinite ease-in-out;
+    /* அனிமேஷனை தூக்கியாச்சு, இப்போ நிலையான ஒரு பிரீமியம் ஒளிவட்டம் மட்டும் இருக்கும் */
+    box-shadow: 0 10px 30px rgba(6, 182, 212, 0.2); 
+    transition: transform 0.3s ease;
 }
-@keyframes pulseGlow {
-    0%, 100% { box-shadow: 0 0 20px rgba(6, 182, 212, 0.2); transform: scale(1); }
-    50% { box-shadow: 0 0 35px rgba(6, 182, 212, 0.5); transform: scale(1.03); }
+
+/* மவுஸை போட்டோ மேல வைக்கும்போது மட்டும் லேசான இன்டராக்டிவ் எஃபெக்ட் (விருப்பப்பட்டால்) */
+.profile-photo:hover {
+    transform: scale(1.04);
+    box-shadow: 0 10px 35px rgba(6, 182, 212, 0.4);
 }
 
 .hero-content h1 {
