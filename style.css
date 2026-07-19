@@ -47,9 +47,12 @@ body {
 }
 
 .nav-links {
-    display: flex;
+    display: flex !important; /* பிரவுசரை கட்டாயப்படுத்தி Flex லேஅவுட்டாக மாற்றுகிறது */
+    flex-direction: row;      /* லிங்க்குகளை ஒரே வரிசையில் நேராக வைக்கிறது */
     list-style: none;
     gap: 2.2rem;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-links a {
@@ -434,13 +437,14 @@ footer {
 
 /* Clean Adaptive Mobile Breakpoints */
 @media (max-width: 768px) {
-    .nav-links { display: none; }
+    .nav-links { 
+        display: none !important; /* மொபைலில் மட்டும் மெனு மறையும் */
+    }
     section { padding: 6rem 6% 3rem 6%; }
     .hero-content h1 { font-size: 2.6rem; }
     .skills-container { grid-template-columns: 1fr; }
     .timeline-header { flex-direction: column; }
 }
-
 /* ==========================================================================
    Universal Scroll Animations (Intersection Observer Core with Smooth Delay)
    ========================================================================== */
