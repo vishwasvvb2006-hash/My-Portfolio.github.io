@@ -112,6 +112,7 @@ h2::after {
 .hero-section {
     align-items: center;
     text-align: center;
+    padding-top: 12rem !important; /* நேவிகேஷன் பாருக்குக் கீழே போட்டோ வர கூடுதல் டாப் பேடிங் */
 }
 
 .hero-content {
