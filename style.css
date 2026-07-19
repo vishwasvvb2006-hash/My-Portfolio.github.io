@@ -123,9 +123,9 @@ h2::after {
 }
 
 .profile-photo-container {
+    margin-top: 2rem; /* டாப் மார்ஜின் கூட்டுவதன் மூலம் போட்டோ இன்னும் கீழே இறங்கி முழுமையாகத் தெரியும் */
     margin-bottom: 1.8rem;
 }
-
 /* பிரீமியம் பல்ஸ் க்ளோ எஃபெக்ட் */
 .profile-photo {
     width: 160px;
