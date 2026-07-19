@@ -130,12 +130,12 @@ h2::after {
     width: 160px;
     height: 160px;
     border-radius: 50%;
-    object-fit: cover;
+    object-fit: contain; /* 'cover' ஐ எடுத்துவிட்டு 'contain' ஆக மாற்றவும் */
+    background-color: var(--bg-card); /* படம் முழுமையாகத் தெரியும்போது மீதி இடம் அழகாக இருக்க background கலர் */
     border: 3px solid var(--accent);
     box-shadow: 0 0 20px rgba(6, 182, 212, 0.2);
     animation: pulseGlow 3s infinite ease-in-out;
 }
-
 @keyframes pulseGlow {
     0%, 100% { box-shadow: 0 0 20px rgba(6, 182, 212, 0.2); transform: scale(1); }
     50% { box-shadow: 0 0 35px rgba(6, 182, 212, 0.5); transform: scale(1.03); }
