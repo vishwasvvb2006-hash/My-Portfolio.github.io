@@ -46,9 +46,10 @@ body {
     letter-spacing: -0.5px;
 }
 
+/* லேப்டாப்பில் மெனு லிங்க்குகள் ஒரே வரியில் நேராக வர கட்டாயப்படுத்துகிறது */
 .nav-links {
-    display: flex !important; /* பிரவுசரை கட்டாயப்படுத்தி Flex லேஅவுட்டாக மாற்றுகிறது */
-    flex-direction: row;      /* லிங்க்குகளை ஒரே வரிசையில் நேராக வைக்கிறது */
+    display: flex !important;
+    flex-direction: row !important;
     list-style: none;
     gap: 2.2rem;
     margin: 0;
@@ -115,7 +116,7 @@ h2::after {
 .hero-section {
     align-items: center;
     text-align: center;
-    padding-top: 12rem !important; /* நேவிகேஷன் பாருக்குக் கீழே போட்டோ வர கூடுதல் டாப் பேடிங் */
+    padding-top: 13rem !important; /* நேவிகேஷன் பார் போட்டோவை மறைக்காமல் இருக்க கூடுதல் டாப் ஸ்பேஸ் */
 }
 
 .hero-content {
@@ -126,22 +127,22 @@ h2::after {
 }
 
 .profile-photo-container {
-    margin-top: 2rem; /* டாப் மார்ஜின் கூட்டுவதன் மூலம் போட்டோ இன்னும் கீழே இறங்கி முழுமையாகத் தெரியும் */
+    margin-top: 1.5rem;
     margin-bottom: 1.8rem;
 }
-/* அனிமேஷனை நீக்கிவிட்டு போட்டோவை ஒரே இடத்தில் கச்சிதமாக உட்கார வைக்கும் ஸ்டைல் */
+
+/* பிளிங்கிங் அனிமேஷன் முழுமையாக நீக்கப்பட்டு, ஒரே இடத்தில் நிலையாக இருக்கும் போட்டோ ஸ்டைல் */
 .profile-photo {
     width: 160px;
     height: 160px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid var(--accent);
-    /* அனிமேஷனை தூக்கியாச்சு, இப்போ நிலையான ஒரு பிரீமியம் ஒளிவட்டம் மட்டும் இருக்கும் */
     box-shadow: 0 10px 30px rgba(6, 182, 212, 0.2); 
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* மவுஸை போட்டோ மேல வைக்கும்போது மட்டும் லேசான இன்டராக்டிவ் எஃபெக்ட் (விருப்பப்பட்டால்) */
+/* மவுஸ் வைக்கும் போது மட்டும் லேசான மிதப்பு எஃபெக்ட் */
 .profile-photo:hover {
     transform: scale(1.04);
     box-shadow: 0 10px 35px rgba(6, 182, 212, 0.4);
@@ -440,13 +441,14 @@ footer {
 /* Clean Adaptive Mobile Breakpoints */
 @media (max-width: 768px) {
     .nav-links { 
-        display: none !important; /* மொபைலில் மட்டும் மெனு மறையும் */
+        display: none !important; /* மொபைலில் மட்டும் மெனு மறைந்து கொள்ளும் */
     }
     section { padding: 6rem 6% 3rem 6%; }
     .hero-content h1 { font-size: 2.6rem; }
     .skills-container { grid-template-columns: 1fr; }
     .timeline-header { flex-direction: column; }
 }
+
 /* ==========================================================================
    Universal Scroll Animations (Intersection Observer Core with Smooth Delay)
    ========================================================================== */
